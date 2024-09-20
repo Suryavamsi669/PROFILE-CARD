@@ -1,3 +1,22 @@
+.skills-logos {
+  display: flex; /* Align the logos horizontally */
+  justify-content: space-around; /* Space logos evenly */
+  align-items: center; /* Align the logos vertically if they have different heights */
+  margin-top: 10px;
+}
+
+.skill-logo {
+  width: 50px; /* Adjust size as per your preference */
+  height: auto; /* Maintain the aspect ratio */
+  margin: 0 10px; /* Space between logos */
+  transition: transform 0.3s ease; /* Add smooth hover effect */
+}
+
+.skill-logo:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
 /* General Body Styling */
 body {
     font-family: Arial, sans-serif;
