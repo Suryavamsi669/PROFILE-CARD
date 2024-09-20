@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHODE SURYAVAMSI PROFILE CARD</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+  <!-- Quiz Section -->
+  <div id="quiz-section" class="quiz-container">
+    <h2>𝙎𝙊𝙇𝙑𝙀 𝙏𝙃𝙄𝙎 𝙌𝙐𝙄𝙕 𝙏𝙊 𝙑𝙄𝙀𝙒 𝙈𝙔 𝙋𝙍𝙊𝙁𝙄𝙇𝙀 𝘾𝘼𝙍𝘿</h2>
+    <p>What is 5 + 3?</p>
+    <input type="number" id="quiz-answer" placeholder="Enter your answer">
+    <button onclick="checkAnswer()">𝙎𝙐𝘽𝙈𝙄𝙏</button>
+    <p id="quiz-message" class="hidden"></p>
+  </div>
+
+  <!-- Profile Card Container (hidden until quiz is solved) -->
+  <div id="profile-section" class="card-container hidden">
+    <div class="card">
+
+      <!-- Top Section with Profile Image and Email Icon -->
+      <div class="top-section">
+        <img src="assets/profile.png" alt="Profile Image" class="profile-pic">
+        <a href="mailto:chodesuryavamsi@gmail.com" class="mail-btn">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <!-- Profile Content -->
+      <div class="content">
+        <h2>𝘾𝙃𝙊𝘿𝙀 𝙎𝙐𝙍𝙔𝘼𝙑𝘼𝙈𝙎𝙄</h2>
+        <p>𝙄𝙣𝙣𝙤𝙫𝙖𝙩𝙞𝙫𝙚 𝙁𝙪𝙡𝙡 𝙎𝙩𝙖𝙘𝙠 𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧 𝙨𝙥𝙚𝙘𝙞𝙖𝙡𝙞𝙯𝙞𝙣𝙜 𝙞𝙣 𝙗𝙪𝙞𝙡𝙙𝙞𝙣𝙜 𝙨𝙘𝙖𝙡𝙖𝙗𝙡𝙚, 𝙚𝙣𝙙-𝙩𝙤-𝙚𝙣𝙙 𝙨𝙤𝙡𝙪𝙩𝙞𝙤𝙣𝙨 𝙩𝙝𝙖𝙩 𝙢𝙚𝙧𝙜𝙚 𝙨𝙚𝙖𝙢𝙡𝙚𝙨𝙨 𝙪𝙨𝙚𝙧 𝙚𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙚𝙨 𝙬𝙞𝙩𝙝 𝙧𝙤𝙗𝙪𝙨𝙩 𝙗𝙖𝙘𝙠𝙚𝙣𝙙 𝙖𝙧𝙘𝙝𝙞𝙩𝙚𝙘𝙩𝙪𝙧𝙚.</p>
+
+        <!-- Skills Section -->
+        <div class="skills-section">
+          <h3>𝙎𝙆𝙄𝙇𝙇𝙎</h3>
+          <div class="skills-logos">
+            <img src="assets/java-logo.png" alt="Java" class="skill-logo">
+            <img src="assets/html-logo.png" alt="HTML" class="skill-logo">
+            <img src="assets/css-logo.png" alt="CSS" class="skill-logo">
+            <img src="assets/sql-logo.png" alt="SQL" class="skill-logo">
+          </div>
+        </div>
+
+        <!-- Buttons for Projects, Resume, and Portfolio -->
+        <div class="buttons-section">
+          <button class="contact-btn" onclick="window.location.href='projects.html'">𝙋𝙍𝙊𝙅𝙀𝘾𝙏𝙎</button>
+          <button class="resume-btn" onclick="window.location.href='assets/resume.pdf'">𝙍𝙀𝙎𝙐𝙈𝙀</button>
+          <button class="portfolio-btn" onclick="window.location.href='https://tinyurl.com/suryavamsi'">𝙋𝙊𝙍𝙏𝙁𝙊𝙇𝙄𝙊</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

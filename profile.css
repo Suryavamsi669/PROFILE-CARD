@@ -1,0 +1,106 @@
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Profile Card Container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Profile Card Styling */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Top Section with Profile Image */
+.top-section {
+  position: relative;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.mail-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #ff6347;
+}
+
+/* Content Styling */
+.content h2 {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.content p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Skills Section Styling */
+.skills-section {
+  margin: 20px 0;
+}
+
+.skills-logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skill-logo {
+  width: 50px;
+  height: 50px;
+}
+
+/* Buttons Section Styling */
+.buttons-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Button Styles for Projects, Resume, and Portfolio with Light Pink Color */
+.contact-btn, .resume-btn, .portfolio-btn {
+  background-color: #ffc0cb; /* Light pink color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Buttons */
+.contact-btn:hover, .resume-btn:hover, .portfolio-btn:hover {
+  background-color: #ffb6c1; /* Slightly darker pink on hover */
+}
+/* Profile Image Styling with Circle Shape and Effects */
+.profile-pic {
+  width: 150px; /* Adjust the size of the image */
+  height: 150px; /* Ensuring it's a square for the circle effect */
+  border-radius: 50%; /* This makes the image circular */
+  border: 5px solid #c0ecff00; /* Light pink border around the image */
+  box-shadow: 0 0 15px rgba(255, 192, 203, 0.6); /* Soft pink glowing effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}

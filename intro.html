@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unlock Profile Card</title>
+  <link rel="stylesheet" href="intro.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Welcome to the Puzzle & Quiz Challenge!</h1>
+    <p>Solve the quiz and puzzle to unlock the profile card.</p>
+
+    <!-- Quiz Section -->
+    <div class="quiz-section">
+      <h3>Quiz: What is the sum of 2 + 3?</h3>
+      <input type="text" id="quizAnswer" placeholder="Enter your answer">
+      <button onclick="checkQuiz()">Submit Quiz</button>
+      <p id="quizResult" style="display:none; color: red;">Incorrect answer, try again!</p>
+    </div>
+
+    <!-- Puzzle Section -->
+    <div class="puzzle-section" style="display:none;">
+      <h3>Puzzle: Arrange the following letters to form a word: NWI</h3>
+      <input type="text" id="puzzleAnswer" placeholder="Your answer here">
+      <button onclick="checkPuzzle()">Submit Puzzle</button>
+      <p id="puzzleResult" style="display:none; color: red;">Incorrect! Try again!</p>
+    </div>
+
+    <!-- Unlock Profile Button -->
+    <button id="unlockButton" onclick="openProfile()" style="display:none;">Unlock Profile Card</button>
+  </div>
+
+  <script>
+    // Function to check quiz answer
+    function checkQuiz() {
+      var answer = document.getElementById("quizAnswer").value;
+      if (answer == "5") {
+        document.querySelector(".puzzle-section").style.display = "block"; // show puzzle section
+      } else {
+        document.getElementById("quizResult").style.display = "block"; // show incorrect message
+      }
+    }
+
+    // Function to check puzzle answer
+    function checkPuzzle() {
+      var answer = document.getElementById("puzzleAnswer").value;
+      if (answer.toLowerCase() === "win") {
+        document.getElementById("unlockButton").style.display = "block"; // unlock button
+      } else {
+        document.getElementById("puzzleResult").style.display = "block"; // show incorrect message
+      }
+    }
+
+    // Function to open profile page
+    function openProfile() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

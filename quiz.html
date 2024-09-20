@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unlock Profile</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>𝙎𝙤𝙡𝙫𝙚 𝙩𝙝𝙚 𝙈𝙖𝙩𝙝 𝙌𝙪𝙞𝙯 𝙩𝙤 𝙐𝙣𝙡𝙤𝙘𝙠 𝙢𝙮 𝙋𝙧𝙤𝙛𝙞𝙡𝙚 𝘾𝙖𝙧𝙙!</h1>
+
+    <!-- Mathematical Question -->
+    <div class="quiz-section">
+      <h3 id="mathQuestion">Question will appear here...</h3>
+      <input type="text" id="quizAnswer" placeholder="Enter your answer">
+      <button onclick="checkMathQuiz()">Submit Answer</button>
+      <p id="quizResult" style="display:none; color: red;">Incorrect answer, try again!</p>
+    </div>
+
+    <!-- Unlock Button (hidden until quiz is solved) -->
+    <button id="unlockButton" onclick="openProfile()" style="display:none;">𝙐𝙣𝙡𝙤𝙘𝙠 𝙋𝙧𝙤𝙛𝙞𝙡𝙚 𝘾𝙖𝙧𝙙</button>
+  </div>
+
+  <script>
+    let correctAnswer;
+
+    // Generate a random math question when the page loads
+    window.onload = function() {
+      generateMathQuestion();
+    }
+
+    function generateMathQuestion() {
+      const num1 = Math.floor(Math.random() * 10) + 1; // random number between 1 and 10
+      const num2 = Math.floor(Math.random() * 10) + 1; // random number between 1 and 10
+      const operators = ['+', '-', '*']; // available operators
+      const operator = operators[Math.floor(Math.random() * operators.length)]; // random operator
+
+      // Create the question and calculate the correct answer
+      const question = `${num1} ${operator} ${num2}`;
+      document.getElementById("mathQuestion").innerText = `What is ${question}?`;
+
+      // Evaluate the correct answer based on the operator
+      correctAnswer = eval(question);
+    }
+
+    function checkMathQuiz() {
+      const userAnswer = Number(document.getElementById("quizAnswer").value); // get user's input and convert to a number
+      if (userAnswer === correctAnswer) { // correct answer
+        document.getElementById("unlockButton").style.display = "block"; // show unlock button
+        document.getElementById("quizResult").style.display = "none"; // hide incorrect message
+      } else { // incorrect answer
+        document.getElementById("quizResult").style.display = "block"; // show incorrect message
+      }
+    }
+
+    // Redirect to the profile page once unlocked
+    function openProfile() {
+      window.location.href = "profile.html"; // redirect to profile page
+    }
+  </script>
+</body>
+</html>
